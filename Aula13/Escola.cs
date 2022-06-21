@@ -19,11 +19,19 @@ namespace Aula13
                 Sobrenome = "Silva",
                 Telefone = 123456789,
             });
+
+            Matriculados.Add(2, new Aluno()
+            {
+                Matricula = 5678,
+                Nome = "Maria",
+                Sobrenome = "Pereira",
+                Telefone = 987654321,
+            });
         }
 
         public void RemoverAluno()
         {
-            Matriculados.Remove(123, "José");
+            Matriculados.Remove(1);
         }
     }
 }

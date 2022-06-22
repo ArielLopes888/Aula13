@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Aula13
 {
-    public class Aluno
+    public class Aluno 
     {
         public int Matricula;
         public string Nome;
         public string Sobrenome;
-        public int Telefone;
+        public string Telefone;
+
     }
 }

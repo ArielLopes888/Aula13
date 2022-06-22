@@ -10,28 +10,22 @@ namespace Aula13
     {
         Dictionary<int, Aluno> Matriculados = new Dictionary<int, Aluno>();
 
-        public void CadastrarAluno()
+        public void CadastrarAluno(int id, Aluno aluno)
         {
-            Matriculados.Add(1, new Aluno()
-            {
-                Matricula = 1234,
-                Nome = "José",
-                Sobrenome = "Silva",
-                Telefone = 123456789,
-            });
-
-            Matriculados.Add(2, new Aluno()
-            {
-                Matricula = 5678,
-                Nome = "Maria",
-                Sobrenome = "Pereira",
-                Telefone = 987654321,
-            });
+            Matriculados.Add(id, aluno);
         }
 
-        public void RemoverAluno()
+        public void RemoverAluno(int id)
         {
-            Matriculados.Remove(1);
+            Matriculados.Remove(id);
+        }
+
+        public void Listar()
+        {
+            foreach (var item in Matriculados)
+            {
+                Console.WriteLine($"{item.Key} - {item.Value.Nome} {item.Value.Sobrenome}");
+            }
         }
     }
 }

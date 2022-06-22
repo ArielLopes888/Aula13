@@ -25,15 +25,13 @@
 
                     escola.CadastrarAluno(id, aluno_user);
 
-                    escola.Listar();
-
                     id++;
                 }
                 else if(escolha == "2")
                 {
-                    
-                    Console.WriteLine("Removido com SUCESSO!:");
                     escola.RemoverAluno(id);
+                    Console.WriteLine("Removido com SUCESSO!:");
+                
                     Console.WriteLine(Environment.NewLine);
                 }
                 else if(escolha == "3")

@@ -29,10 +29,9 @@
                 }
                 else if(escolha == "2")
                 {
+
                     escola.RemoverAluno(id);
-                    Console.WriteLine("Removido com SUCESSO!:");
-                
-                    Console.WriteLine(Environment.NewLine);
+                   
                 }
                 else if(escolha == "3")
                 {

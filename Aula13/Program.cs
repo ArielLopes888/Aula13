@@ -6,22 +6,44 @@
         {
             var escola = new Escola();
             int id = 0;
-            do
+            string escolha = "1";
+            while (escolha == "1" || escolha == "2" || escolha == "3")
             {
-                var aluno1 = new Aluno();
+                Console.WriteLine("Escolha uma operação: 1/Cadastrar  2/Remover  3/Listar");
+                escolha = Console.ReadLine();
+                if (escolha == "1")
+                {
+                    var aluno_user = new Aluno();
 
-                Console.WriteLine("Digite seu nome:");
-                aluno1.Nome = Console.ReadLine();
-                Console.WriteLine("Digite seu Sobrenome:");
-                aluno1.Sobrenome = Console.ReadLine();
+                    Console.WriteLine("Digite seu nome:");
+                    aluno_user.Nome = Console.ReadLine();
+                    Console.WriteLine("Digite seu Sobrenome:");
+                    aluno_user.Sobrenome = Console.ReadLine();
+                    Console.WriteLine("Digite seu telefone:");
+                    aluno_user.Telefone = Console.ReadLine();
+                    Console.WriteLine(Environment.NewLine);
 
-                escola.CadastrarAluno(id, aluno1);
+                    escola.CadastrarAluno(id, aluno_user);
 
-                escola.Listar();
+                    escola.Listar();
 
-                id++;
-
-            } while (true);
+                    id++;
+                }
+                else if(escolha == "2")
+                {
+                    
+                    Console.WriteLine("Removido com SUCESSO!:");
+                    escola.RemoverAluno(id);
+                    Console.WriteLine(Environment.NewLine);
+                }
+                else if(escolha == "3")
+                {
+                    escola.Listar();
+                    Console.WriteLine(Environment.NewLine);
+                }
+            
+            }
+            
             
         }
     }

@@ -17,7 +17,7 @@ namespace Aula13
 
         public void RemoverAluno(int id)
         {
-            Console.WriteLine("Digite seu o Id:");
+            
             id = Convert.ToInt32(Console.ReadLine());
             Matriculados.Remove(id);
         }

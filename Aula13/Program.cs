@@ -29,9 +29,9 @@
                 }
                 else if(escolha == "2")
                 {
-
+                    Console.WriteLine("Digite o seu Id:");
                     escola.RemoverAluno(id);
-                   
+                    Console.WriteLine("Removido com SUCESSO!");
                 }
                 else if(escolha == "3")
                 {
